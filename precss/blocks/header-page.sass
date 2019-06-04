@@ -1,0 +1,249 @@
+.page-header
+    background-image: url(../img/header-background-img.png)
+    background-repeat: no-repeat
+    background-position: top -20px center
+
+.container
+    +wrapper()
+    padding-bottom: 85px
+
+.header__information-block
+    display: grid
+    grid-template-columns: 2fr 2fr 1fr 1fr
+    grid-template-rows: 100px
+    align-items: center
+    margin-bottom: 200px
+    .header__adress
+        letter-spacing: 0.9px
+        text-align: right
+        padding-right: 10px
+    .header__mobile-phone
+        text-align: center
+        letter-spacing: 0.9px
+    .header__link
+        text-align: right
+        letter-spacing: 0.9px
+        color: #f5112c
+        text-decoration: none
+        cursor: pointer
+        &:after
+            transform: translateX(37px)
+            display: block
+            content: ''
+            height: 2px
+            width: 0%
+            background-color: #f5112c
+            opacity: 0.5
+            transition: width .3s ease-in-out
+    .header__link:hover:after
+        width: 153px
+
+
+.header__content-block
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto)
+    .header__slogan
+        grid-area: 1 / 2 / 2 / 3
+        margin-bottom: 63px
+        font-family: "Gilroy - Extra Bold"
+        text-transform: uppercase
+        .header__slogan--first
+            display: block
+            font-size: 34px
+            letter-spacing: 1.7px
+            padding-left: 49px
+        .header__slogan--second
+            display: block
+            padding-top: 6px
+            padding-left: 52px
+            font-size: 45px
+            letter-spacing: 2.25px
+        .header__slogan--third
+            position: relative
+            display: block
+            padding-top: 3px
+            padding-left: 50px
+            font-size: 45px
+            letter-spacing: 2.25px
+        .header__slogan--third::after
+            position: absolute
+            top: 65px
+            display: block
+            content: ''
+            width: 64px
+            height: 7px
+            background-color: #f5112c
+
+    .header__slogan-description
+        grid-area: 2 / 2 / 3 / 3
+        margin-bottom: 99px
+        padding-left: 51px
+        padding-right: 110px
+        letter-spacing: 0.9px
+        font-weight: 300
+        line-height: 24px
+    .header__button
+        grid-area: 3 / 2 / 4 / 3
+        margin-left: 45px
+        box-shadow: 0 10px 18px rgba(246, 27, 60, 0.55)
+        border: 1px solid red
+        &:hover
+            background-color: #f32b4c
+
+            
+
+
+
+@media screen and (max-width: 1169.98px)
+    .page-header
+        background-image: url(../img/header-background-img.png)
+        background-repeat: no-repeat
+        background-position: top -70px center
+        background-size: cover
+    .container
+        padding-bottom: 120px
+    .header__logo
+        width: 63px
+        height: 23px
+    .header__information-block
+        grid-template-columns: 1fr 2fr 1fr 1fr
+        grid-template-rows: 89px
+        margin-bottom: 86px
+        font-size: 16px
+        font-weight: 300
+        line-height: 24px
+        letter-spacing: 0.8px
+        .header__adress
+            text-align: right
+            padding-right: 20px
+        .header__mobile-phone
+            padding-right: 5px
+            text-align: center
+        .header__link
+            text-align: right
+            color: #f5112c
+    
+    .header__content-block
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto)
+        .header__slogan
+            grid-area: 1 / 2 / 2 / 3
+            margin-bottom: 27px
+            font-family: "Gilroy - Extra Bold"
+            text-transform: uppercase
+            .header__slogan--first
+                display: block
+                font-size: 24px
+                letter-spacing: 1.2px
+                padding-left: 7px
+            .header__slogan--second
+                display: block
+                padding-top: 0px
+                padding-left: 5px
+                font-size: 30px
+                letter-spacing: 1.5px
+                transform: translateY(-12px)
+            .header__slogan--third
+                padding-top: 0px
+                padding-left: 5px
+                font-size: 30px
+                letter-spacing: 1.5px
+                transform: translateY(-24px)
+            .header__slogan--third::after
+                top: 50px
+
+        .header__slogan-description
+            grid-area: 2 / 2 / 3 / 3
+            margin-bottom: 68px
+            padding-left: 7px
+            padding-right: 10px
+            font-weight: 300
+            line-height: 24px
+            letter-spacing: 0.8px
+            font-size: 16px
+
+        .header__button
+            grid-area: 3 / 2 / 4 / 3
+            margin-left: 11px
+            min-height: 60px
+            max-width: 294px
+            font-size: 14px
+    
+@media screen and (max-width: 767.98px)
+    .page-header
+        padding-bottom: 84px
+    .container
+        padding-bottom: 85px
+    .page-header
+        background-image: url(../img/header-background-mobile.png)
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: auto 52%
+    .header__information-block
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 35.5px 35.5px
+        margin-bottom: 340px
+        font-size: 16px
+        font-weight: 300
+        line-height: 24px
+        letter-spacing: 0.8px
+        .header__logo
+            grid-area: 1 / 1 / 3 / 2
+            align-self: center
+        .header__adress
+            display: none
+        .header__mobile-phone
+            font-size: 14px
+            line-height: 24px
+            letter-spacing: 0.7px
+            transform: translateY(8px)
+            text-align: right
+        .header__link
+            grid-area: 2 / 2 / 3 / 3
+            transform: translateY(-8px)
+    
+    .header__content-block
+        grid-template-columns: 1fr
+        grid-template-rows: minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto)
+        text-align: center
+        justify-content: center
+        .header__slogan
+            line-height: 21px
+            margin-bottom: 15px
+            grid-area: 1 / 1 / 2 / 2
+            .header__slogan--first
+                font-size: 18px
+                letter-spacing: 0.9px
+            .header__slogan--second
+                font-size: 24px
+                letter-spacing: 1.2px
+            .header__slogan--third
+                font-size: 24px
+                letter-spacing: 1.2px
+            .header__slogan--third::after
+                top: 40px
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                content: ''
+                width: 64px
+                height: 7px
+                background-color: #f5112c
+        .header__slogan-description
+            grid-area: 2 / 1 / 3 / 2
+            margin-bottom: 15px
+            padding-left: 0
+            padding-right: 0
+            letter-spacing: 0.7px
+            font-size: 14px
+        .header__button
+            display: block
+            min-width: 295px
+            margin-left: 0
+            margin: 0 auto
+            grid-area: 3 / 1 / 4 / 2
+        
+
+
+
